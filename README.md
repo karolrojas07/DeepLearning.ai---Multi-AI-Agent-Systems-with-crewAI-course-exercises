@@ -1,6 +1,7 @@
 # Lessons' Exercises from DeepLearning.ai -  Multi AI Agent Systems with crewAI Course
 This project uses `uv` as package manager.
-Is developen in an operating system = Windows 11 and with python version = 3.13.5
+Is developed in a  Windows 11 operating system and with python version 3.13.5..
+Also uses Google GEMINI as LLM for all agents.
 
 ## Pre-requrements
 1. Install `uv`
@@ -12,6 +13,11 @@ Is developen in an operating system = Windows 11 and with python version = 3.13.
 1. Create environment `uv venv --python 3.13`
 2. Activate environment `source .venv/Scripts/activate`
 3. Install dependencies `uv pip install .`
+4. Set up environment variables `mv .env.example .env`
+   ``` .env
+    GEMINI_API_KEY=your_api_key // Get it from: https://aistudio.google.com/apikey
+    MODEL=gemini/gemini-2.0-flash
+   ```
 
 
 ## Run lessons
