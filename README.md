@@ -27,6 +27,11 @@ Also uses Google GEMINI as LLM for all agents.
 uv run python -m src.article_writer.main
 ```
 
+### Lesson 2: Customer support system
+
+``` bash
+uv run python -m src.customer_support.main
+```
 
 ## Troubleshoot errors
 If you face issues installing `crewai`, refer to the official [CrewAI installation instructions and issues](https://docs.crewai.com/en/installation#video-tutorial).
