@@ -1,6 +1,6 @@
 # Lessons' Exercises from DeepLearning.ai -  Multi AI Agent Systems with crewAI Course
 This project uses `uv` as package manager.
-Is developed in a  Windows 11 operating system and with python version 3.13.5..
+Is developed in a  Windows 11 operating system and with python version 3.13.5.
 Also uses Google GEMINI as LLM for all agents.
 
 ## Pre-requrements
@@ -17,8 +17,8 @@ Also uses Google GEMINI as LLM for all agents.
    ``` .env
     GEMINI_API_KEY=your_api_key // Get it from: https://aistudio.google.com/apikey
     MODEL=gemini/gemini-2.0-flash
+    SERPER_API_KEY=your_serper_api_key // Get it from: https://serper.dev/
    ```
-
 
 ## Run lessons
 ### Lesson 1: Article writer system
@@ -31,6 +31,12 @@ uv run python -m src.article_writer.main
 
 ``` bash
 uv run python -m src.customer_support.main
+```
+
+### Lesson 3: Customer outreach system
+
+``` bash
+uv run python -m src.customer_outreach.main
 ```
 
 ## Troubleshoot errors
