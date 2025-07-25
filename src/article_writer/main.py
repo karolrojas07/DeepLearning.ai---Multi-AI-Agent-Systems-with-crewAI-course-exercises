@@ -1,0 +1,30 @@
+from .crew import ArticleWriterCrew
+import warnings
+from IPython.display import Markdown
+
+warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
+
+# This main file is intended to be a way for you to run your
+# crew locally, so refrain from adding unnecessary logic into this file.
+# Replace with inputs you want to test with, it will automatically
+# interpolate any tasks and agents information
+
+def run():
+    """
+    Run the crew.
+    """
+    inputs = {
+        'topic': 'MCP Servers'
+    }
+    
+    try:
+        result = ArticleWriterCrew().crew().kickoff(inputs=inputs)
+        print("\n\n=== FINAL REPORT ===\n\n")
+        print(result.raw)
+        
+    except Exception as e:
+        raise Exception(f"An error occurred while running the crew: {e}")
+    
+    
+if __name__ == "__main__":
+    run()

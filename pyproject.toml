@@ -1,0 +1,7 @@
+[project]
+name = "multi-agent-systems-crewai"
+version = "1.0.0"
+requires-python = ">=3.13"
+dependencies = [
+    "crewai[tools]>=0.150.0",
+]
