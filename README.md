@@ -39,5 +39,16 @@ uv run python -m src.customer_support.main
 uv run python -m src.customer_outreach.main
 ```
 
+### Lesson 4: Event planning system
+Because last CrewAI updates nly allows at most one asynchronous last task, the logistic task is not marked as asyncronous. Otherwise this error is prompt it:
+```
+An error occurred while running the crew: 1 validation error for Crew
+  The crew must end with at most one asynchronous task. [type=async_task_count, input_value={'agents': [Agent(role=Ve...own.)], 'verbose': True}, input_type=dict]
+```
+
+``` bash
+uv run python -m src.event_planning.main
+```
+
 ## Troubleshoot errors
 If you face issues installing `crewai`, refer to the official [CrewAI installation instructions and issues](https://docs.crewai.com/en/installation#video-tutorial).
