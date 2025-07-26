@@ -3,3 +3,5 @@
 __pycache__/
 .vscode
 src/multi_agent_systems_crewai.egg-info/
+
+build
