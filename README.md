@@ -50,5 +50,10 @@ An error occurred while running the crew: 1 validation error for Crew
 uv run python -m src.event_planning.main
 ```
 
+### Lesson 5: Financial Analysis system 
+``` bash
+uv run python -m src.financial_analysis.main
+```
+
 ## Troubleshoot errors
 If you face issues installing `crewai`, refer to the official [CrewAI installation instructions and issues](https://docs.crewai.com/en/installation#video-tutorial).
