@@ -1,7 +1,6 @@
 from crewai import Task, Agent, Crew, Process
 from crewai.project import CrewBase, agent, task, crew
 from crewai_tools import ScrapeWebsiteTool, SerperDevTool
-from langchain_google_genai import ChatGoogleGenerativeAI
 from typing import List
 
 @CrewBase

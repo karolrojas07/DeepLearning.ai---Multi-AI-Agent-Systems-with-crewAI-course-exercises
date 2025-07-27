@@ -55,5 +55,11 @@ uv run python -m src.event_planning.main
 uv run python -m src.financial_analysis.main
 ```
 
+### Lesson 6: Tailor Job application system 
+Since `Gemini` does not support embeddings and MDXSearchTools requires to setup the `OPEN_AI_API_KEY` env variable, we do not implement the MXDSearchTool
+``` bash
+uv run python -m src.tailor_job_applications.main
+```
+
 ## Troubleshoot errors
 If you face issues installing `crewai`, refer to the official [CrewAI installation instructions and issues](https://docs.crewai.com/en/installation#video-tutorial).
