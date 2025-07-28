@@ -56,7 +56,8 @@ uv run python -m src.financial_analysis.main
 ```
 
 ### Lesson 6: Tailor Job application system 
-Since `Gemini` does not support embeddings and MDXSearchTools requires to setup the `OPEN_AI_API_KEY` env variable, we do not implement the MXDSearchTool
+I recommend to update the `job_posting_url` in the `main.py` in case the current por job does not exists.
+Since `Gemini` does not support embeddings and MDXSearchTools requires to setup the `OPEN_AI_API_KEY` env variable, we implement the MXDSearchTool using Hugging Face
 ``` bash
 uv run python -m src.tailor_job_applications.main
 ```

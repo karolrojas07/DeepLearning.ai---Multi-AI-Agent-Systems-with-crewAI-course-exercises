@@ -16,7 +16,7 @@ profiler:
 
 resume_strategist:
   role: Resume Strategist for Engineers
-  goal: Find all the best ways to make a resume stand out in the job market.,
+  goal: Find all the best ways to make a resume stand out in the job market.
   verbose: True
   backstory: > 
     With a strategic mind and an eye for detail, you excel at refining resumes to highlight the most relevant skills and experiences, 
