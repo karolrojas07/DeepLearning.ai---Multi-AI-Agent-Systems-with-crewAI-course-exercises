@@ -7,6 +7,7 @@ from crewai_tools import (
   MDXSearchTool
 )
 from typing import List
+from pathlib import Path
 
 @CrewBase
 class JobApplicationCrew():
@@ -25,7 +26,30 @@ class JobApplicationCrew():
 
     search_tool = SerperDevTool()
     scrape_tool = ScrapeWebsiteTool()
-    read_resume = FileReadTool(file_path='./documents/fake_resume.md')
+
+    def __init__(self):
+        # Get the base directory path
+        base_path = Path(__file__).parent
+        self.read_resume = FileReadTool(file_path=str(base_path / 'files/fake_resume.md'))
+        self.semantic_search_resume = MDXSearchTool(
+            config=dict(
+                llm=dict(
+                    provider="google",
+                    config=dict(
+                        model="gemini/gemini-2.0-flash"
+                    ),
+                ),
+                embedder=dict(
+                    provider="huggingface",
+                    config=dict(
+                        model="sentence-transformers/all-MiniLM-L6-v2"
+                    ),
+                ),
+            ),
+            mdx=str(base_path / 'files/fake_resume.md')
+        )
+        
+    
     #semantic_search_resume = MDXSearchTool(mdx='./documents/fake_resume.md')
 
     @agent
@@ -41,7 +65,7 @@ class JobApplicationCrew():
         return Agent(
             config=self.agents_config['profiler'], # type: ignore[index]
             verbose=True,  # Enable verbose output for the profiler agent
-            tools=[self.search_tool, self.scrape_tool, self.read_resume]  # Assigning tools to the agent
+            tools=[self.search_tool, self.scrape_tool, self.read_resume, self.semantic_search_resume]  # Assigning tools to the agent
         )
     
     @agent
@@ -49,7 +73,7 @@ class JobApplicationCrew():
         return Agent(
             config=self.agents_config['resume_strategist'], # type: ignore[index]
             verbose=True,  # Enable verbose output for the resume strategist agent
-            tools=[self.search_tool, self.scrape_tool, self.read_resume]  # Assigning tools to the agent
+            tools=[self.search_tool, self.scrape_tool, self.read_resume, self.semantic_search_resume]  # Assigning tools to the agent
         )
     
     @agent
@@ -57,7 +81,7 @@ class JobApplicationCrew():
         return Agent(
             config=self.agents_config['interview_preparer'], # type: ignore[index]
             verbose=True,  # Enable verbose output for the interview preparer agent
-            tools=[self.search_tool, self.scrape_tool, self.read_resume]  # Assigning tools to the agent
+            tools=[self.search_tool, self.scrape_tool, self.read_resume, self.semantic_search_resume]  # Assigning tools to the agent
         )
     
     @task
