@@ -5,3 +5,5 @@ __pycache__/
 src/multi_agent_systems_crewai.egg-info/
 
 build
+db
+chromadb*

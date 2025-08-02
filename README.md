@@ -15,9 +15,12 @@ Also uses Google GEMINI as LLM for all agents.
 3. Install dependencies `uv pip install .`
 4. Set up environment variables `mv .env.example .env`
    ``` .env
-    GEMINI_API_KEY=your_api_key // Get it from: https://aistudio.google.com/apikey
+    GEMINI_API_KEY=your_gemini_api_key // Get it from: https://aistudio.google.com/apikey
+    GOOGLE_API_KEY=your_gemini_api_key
     MODEL=gemini/gemini-2.0-flash
     SERPER_API_KEY=your_serper_api_key // Get it from: https://serper.dev/
+    OPENAI_API_KEY=your_openai_api_key // Get it from: https://platform.openai.com/api-keys
+    OPENAI_MODEL=gpt-3.5-turbo 
    ```
 
 ## Run lessons
@@ -56,7 +59,6 @@ uv run python -m src.financial_analysis.main
 ```
 
 ### Lesson 6: Tailor Job application system 
-Since `Gemini` does not support embeddings and MDXSearchTools requires to setup the `OPEN_AI_API_KEY` env variable, we do not implement the MXDSearchTool
 ``` bash
 uv run python -m src.tailor_job_applications.main
 ```
