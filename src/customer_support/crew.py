@@ -1,7 +1,7 @@
 from crewai import Task, Agent, Crew
 from crewai.project import CrewBase, agent, task, crew
 from typing import List
-from crewai_tools import SerperDevTool, ScrapeWebsiteTool, WebsiteSearchTool
+from crewai_tools import ScrapeWebsiteTool
 
 @CrewBase
 class CustomerSupportCrew():
@@ -50,5 +50,6 @@ class CustomerSupportCrew():
         return Crew(
             agents=self.agents,
             tasks=self.tasks,
-            verbose=True  # Enable verbose output for the crew
+            verbose=True,  # Enable verbose output for the crew
+            memory=True
         )

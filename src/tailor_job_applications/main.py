@@ -13,7 +13,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'job_posting_url': 'https://jobs.lever.co/AIFund/6c82e23e-d954-4dd8-a734-c0c2c5ee00f1?lever-origin=applied&lever-source%5B%5D=AI+Fund',
+        'job_posting_url': 'https://jobs.lever.co/AIFund/b9cd61ea-cae1-411a-987f-ea40ea6f7db8',
         'github_url': 'https://github.com/joaomdmoura',
         'personal_writeup': """Noah is an accomplished Software
         Engineering Leader with 18 years of experience, specializing in
