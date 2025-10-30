@@ -13,7 +13,7 @@ Also uses Google GEMINI as LLM for all agents.
 1. Create environment `uv venv --python 3.13`
 2. Activate environment `source .venv/Scripts/activate`
 3. Install dependencies `uv pip install .`
-4. Set up environment variables `mv .env.example .env`
+4. Set up environment variables `cp .env.example .env`
    ``` .env
     GEMINI_API_KEY=your_gemini_api_key // Get it from: https://aistudio.google.com/apikey
     GOOGLE_API_KEY=your_gemini_api_key
